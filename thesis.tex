@@ -1,0 +1,150 @@
+% Modelo de Trabalhos em LaTeX da UFC
+%
+% Na criação deste modelo foi tomada como base os modelos de monografia da UECE
+% criados por Rudy Matela e Sergio Correia, sem a ajuda deles este trabalho teria sido muito mais
+% difícil. Este modelo utiliza o abnTeX e um pacote (ufc.sty) para formatação
+% de alguns anexos necessários da UFC (folha de rosto, CIP, epígrafe, ...).
+%
+% Este documento não clama possuir conformidade de 100\% com as normas de
+% trabalhos da UFC. Consulte os guias oficiais.
+%
+% Agradeço ao Lincoln que contribui com o brasão da UFC.
+% Agradeço ao Regis e a Mônica pelas contribuições com relação ao "Lorem
+% ipsum"
+%
+% OBS: O modelo de monografias da UECE criado por Rudy Matela encontra-se
+% disponível em: http://matela.com.br/pub/modelo_monografia/
+%
+% Autor: Diego Victor Simões de Sousa
+% Data: 10/06/2011
+
+
+\documentclass[pnumabnt,normaltoc,espacoumemeio,capchap]{abnt}		
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{abnt-alf}
+\usepackage{graphicx}
+\usepackage{ufc}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{eufrak}
+\usepackage{subfig}
+\usepackage[T1]{fontenc}
+\usepackage{gensymb}
+\bibliographystyle{abnt-alf}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% Informações gerais do documento
+\autor{Keveny Filipe Vieira Nunes}
+\autorr{NUNES, K. F. V.}
+\titulo{Trabalho Informal e Precarização: No Municícpio de Maracanaú}
+\local{Redenção, Ceará}
+\cidade{Redenção}
+\data{2014}
+\orientador{Prof. Dr. Gledson Ribeiro de Oliveira}
+\coorientador{}
+\codigocip{A000z}{CDD:000.0}
+
+% Descrição para folha de rosto
+\comentario{
+Trabalho de conclusão de curso apresentado ao curso de Bacharelado em 
+Humanidades da Universidade da Integração Internacional da Lusofonia 
+Afro-Brasileira, como requisito parcial para a obtenção do título de 
+Bacharel em Humanidades.
+}
+
+\comentarioaprovacao{
+Trabalho de conclusão de curso apresentado ao curso de Bacharelado em 
+Humanidades da Universidade da Integração Internacional da Lusofonia 
+Afro-Brasileira, como requisito parcial para a obtenção do título de 
+Bacharel em Humanidades.
+}
+
+% Informações institucionais
+\centro{Centro de Humanidades}
+\departamento{Departamento de Humanidades}
+\curso{Humanidades}
+\instituicao{Universidade da Integração Internacional da Lusofonia Afro-Brasileira - UNILAB}
+
+\tipotrabalho{Monografia}
+\areaconcentracao{Humanidades}
+\nivel{Graduação}
+\tituloacademico{Bacharel}
+
+\dedicatoria{Dedico este trabalho de conclusão de curso a Deus e a Jesus Cristo para expressar minha imensa gratidão.}
+% Epígrafe: citação e autor
+% \epigrafe{``Uma citação citada deve citar o que se pretendia com a citação da citação''}
+% \autorepigrafe{Zé Ninguém}
+
+% Membros da comissão avaliadora
+\bancaum{\ABNTorientadordata\\Universidade da Integração Internacional da Lusofonia Afro-Brasileira (UNILAB)\\Orientador}
+\bancadois{Universidade da Integração Internacional da Lusofonia Afro-Brasileira (UNILAB)\\Co-orientador}
+\bancatres{}
+\bancaquatro{}
+
+% Palavras chave
+%{Informalidade}{Conceito}{Precarização}{Falta de experiência}{Desqualificação}{Ilegal}{Explotação}{Flexibilização do Trabalho}{Maracanaú}
+ \pcs{Trabalho Informal}{Precarização}{Maracanaú}
+% \kws{Bureucracy}{\LaTeX}{Documents}
+
+\begin{document}
+
+\capa
+\folhaderosto
+\makecippage
+\termodeaprovacao
+
+% Dedicatória (Opicional)
+\makededicatoria
+
+\pretextualchapter{Agradecimentos}
+Agradeço este trabalho primeiramente a Deus e a Jesus Cristo, depois a minha mãe que me ajudou 
+muito em toda minha vida, me dando todo apoio necessário para que eu pudesse me tornar algo que 
+ela não conseguiu em sua vida. Apesar de todas as dificuldades encontradas ela sempre buscou 
+fazer o possível e o impossível para me ajudar sem nunca medir esforços. Foram muitas adversidades 
+que enfrentamos juntos e conseguimos superar o seu apoio foi fundamental em todos os momentos.
+
+Somente através desse agradecimento quero expressar um pouco da minha felicidade e compartilhar 
+com essa pessoa que merece minha profunda admiração e respeito por tudo que fez e continua fazendo por mim.
+
+Apesar de não ser formada minha mãe sempre me incentivou a estudar e talvez se não fosse por seu 
+incentivo eu não teria chegado até aqui. Apesar de faltarem palavras para expressar minha gratidão 
+para minha mãe porque só eu sei o quanto ela lutou por mim e todas as coisas que ela abdicou para me ajudar.
+
+Agradeço também todas as pessoas da minha família que me ajudaram até aqui dentre elas posso citar: 
+minha mãe Lurdenia, meu avó Caetano Arruda, minha avô Maria de Lourdes, meu tio Sergio Vieira que 
+para mim é um grande intelectual, minha irmã Isabelle.
+
+Quero deixar também aqui um agradecimento especial ao meu orientador, professor e grande intelectual 
+da Universidade da Integração Internacional da Lusofonia afro brasileira: Prof.Dr. Gledson Ribeiro, que 
+foi de extrema importância no meu trabalho e é um profissional que eu particularmente admiro muito 
+por sua capacidade e dedicação.
+
+Agradeço também todos os meus colegas que me ajudaram dentro e fora da universidade dentre eles agradeço 
+ao, Renan Bruno, Jessica Virginia, Isaac, Fladimir Andrade, Diogo Oliveira, Ícaro Oliveira, Lucas Almeida, 
+Danilo Araujo, Paulo Roberto, Leandro Breno, Alef Erlange, Aldonio Silva, Jeferson Alves, Ítalo Robert, 
+que de alguma forma me ajudaram a chegar até aqui e me incentivavam a terminar esta graduação.
+
+\pagebreak
+
+% \makeepigrafe
+\input{abstract}
+% \listadefiguras
+% \listadetabelas
+\tableofcontents
+% \listadesiglas % \sigla{sigla}{Descrição}
+% \listadesimbolos % \simbolo{símbolo}{Descrição}
+
+\input{ch1}
+\input{ch2}
+\input{ch3}
+\input{ch4}
+
+\bibliography{bib}
+
+%\appendix
+%\include{cha}
+
+\end{document}
+
